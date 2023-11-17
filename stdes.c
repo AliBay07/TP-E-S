@@ -454,14 +454,20 @@ int iobuf_fscanf(IOBUF_FILE *f, const char *format, ...)
             {
                 int *num = va_arg(args, int *);
                 char c;
+                int foundNum = 0;
+
                 while (iobuf_read(&c, sizeof(char), 1, f) == 1)
                 {
                     read_chars++;
                     if (c >= '0' && c <= '9') {
                         *num = (*num * 10) + (c - '0');
+                        if (foundNum == 0) {
+                            foundNum = 1;
+                        }
+                    } else if (foundNum == 1) {
+                        break;
                     }
                 }
-                break;
             }
             }
         }
