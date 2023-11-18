@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-#define SIZE_OF_BUFFER 1024
+#define SIZE_OF_BUFFER 4000
 
 typedef struct _ES_FICHIER
 {
@@ -173,7 +173,7 @@ int iobuf_read(void *p, unsigned int taille, unsigned int nbelem, IOBUF_FILE *f)
 
     int size_to_read = taille * nbelem;
     int size_read = 0;
-    char temp_buff[2 * SIZE_OF_BUFFER];
+    char temp_buff[SIZE_OF_BUFFER];
     int temp_buff_pointer = 0;
 
     if (size_to_read > SIZE_OF_BUFFER)

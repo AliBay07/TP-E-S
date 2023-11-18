@@ -85,7 +85,6 @@ void mem_compare (char* ref, char *buff)
     if (ref[i] != buff[i]) {
       iobuf_fprintf(stderr, "ERROR %c != %c at index %d\n", 
           ref[i], buff[i], i);
-          break;
     }
   }
   iobuf_printf ("Done\n");
