@@ -50,6 +50,7 @@ int iobuf_flush(IOBUF_FILE *f)
         {
             f->current_position = 0;
             f->end_index = 0;
+            return 0;
         }
         else
         {
