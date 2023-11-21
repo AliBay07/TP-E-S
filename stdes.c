@@ -35,12 +35,6 @@ void initialize_standard_streams()
     stderr->end_index = 0;
 }
 
-void cleanup_standard_streams()
-{
-    free(stdout);
-    free(stderr);
-}
-
 int iobuf_flush(IOBUF_FILE *f)
 {
     if (f != NULL)
