@@ -28,7 +28,7 @@ void test_iobuf_read(){
     //Probleme car ça n'empeche pas de lire mais juste des char aleatoires dans le buffer (sûrement lié à l'initialisation)
 
     // Cas de test 4: Lecture à partir d'un fichier après sa fermeture
-    IOBUF_FILE *file4 = iobuf_open("files/test_file1.txt", 'W');
+    IOBUF_FILE *file4 = iobuf_open("files/test_file1.txt", 'R');
     iobuf_close(file4);
     char buffer4[100];  // Assurez-vous que la taille du tampon est suffisante
     int result4 = iobuf_read(buffer4, sizeof(char), 99, file4);
