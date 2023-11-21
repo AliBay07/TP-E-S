@@ -118,6 +118,7 @@ int iobuf_close(IOBUF_FILE *f)
     if (result == 0)
     {
         free(f);
+        f = NULL;
     }
 
     return result;
