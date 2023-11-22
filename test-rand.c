@@ -95,7 +95,7 @@ void mem_compare (char* ref, char *buff)
 int main(int argc, char *argv[])
 {
   IOBUF_FILE *f;
-  char* filename = "rand-file.txt";
+  char* filename = "files/test_file2.txt";
 
   init_mem ();
 

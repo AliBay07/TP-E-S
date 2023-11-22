@@ -108,7 +108,6 @@ int iobuf_close(IOBUF_FILE *f)
     }
 
     result = close(f->fd);
-
     if (result == 0)
     {
         free(f);
@@ -172,7 +171,7 @@ int iobuf_read(void *p, unsigned int taille, unsigned int nbelem, IOBUF_FILE *f)
     char temp_buff[SIZE_OF_BUFFER];
     int temp_buff_pointer = 0;
 
-    if (size_to_read > SIZE_OF_BUFFER)
+    if (size_to_read > SIZE_OF_BUFFER )
     {
         size_read = read(f->fd, p, size_to_read);
         if (size_read <= 0)

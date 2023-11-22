@@ -51,4 +51,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+#Files
+filled_file.txt
+test_flush.txt
+
 *.vscode
